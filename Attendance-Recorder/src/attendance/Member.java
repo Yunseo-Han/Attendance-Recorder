@@ -15,7 +15,7 @@ public class Member {
 	public Member(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.attendance = 0;
+		this.attendance = 1;
 		this.extra = 0;
 	}
 
@@ -45,7 +45,13 @@ public class Member {
 	public String toString() {
 		return "[" + firstName + ", " + lastName + ", " + attendance + ", " + extra + "]";
 	}
-	
+
+	/**
+	 * @return comma separated String of Member attributes
+	 */
+	public String toCSV(){
+		return firstName + "," + lastName + "," + attendance + "," + extra + "," + (attendance+extra);
+	}
 	
 	/**
 	 * @return the firstName
